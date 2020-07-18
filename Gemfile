@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'faraday'
+gem 'figaro'
 
 
 group :development, :test do
@@ -41,6 +43,9 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'faker'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'pry'
 end
 
 group :development do

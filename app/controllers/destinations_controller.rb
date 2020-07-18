@@ -6,6 +6,18 @@ class DestinationsController < ApplicationController
   end
 
   def show
+    # api.openweathermap.org/data/2.5/weather?q=Boston&appid=f2d541bf2b6a86e4eaf296f28b3e1cab
+    destination = DestinationFacade.new
+    @weather_at = destination.destination_weather(@destination.name)
+    # conn = Faraday.new(url: "http://api.openweathermap.org/data/2.5/") do |faraday|
+    #   faraday.params["appid"] = ENV['open_weather_api_key']
+    # end
+    #
+    # response = conn.get("weather") do |faraday|
+    #   faraday.params['q'] = @destination.name
+    # end
+    # json = JSON.parse(response.body, symbolize_names: true)
+    # @weather = Weather.new(json)
   end
 
   def new

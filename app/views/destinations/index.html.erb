@@ -7,7 +7,7 @@
   <div class="row">
   <% @destinations.each do |destination| %>
     <div class="col-sm-6 col-med-4 col-xs-12">
-      <h4><%= destination.name %></h4>
+      <h4><%= link_to destination.name, destination_path(destination) %></h4>
       <p><%= destination.zip %></p>
       <p><%= destination.description %></p>
       <%= link_to(image_tag(destination.image_url), destination_path(destination)) %>
