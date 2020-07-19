@@ -31,9 +31,9 @@ describe 'user sees a destination show' do
     visit root_path
     click_on destination.name
     expect(current_path).to eq(destination_path(destination))
-    # expect(page).to have_content(image_tag)
-    # expect(page).to have_css("img[src*='environ-peeling-kuur.jpg']")
+    save_and_open_page
     expect(".image").to_not be_empty
+  end
 end
 # As a user
 # When I visit "/"

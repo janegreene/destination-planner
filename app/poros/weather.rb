@@ -1,5 +1,6 @@
 class Weather
   attr_reader :date, :current_temp, :high_temp, :low_temp, :summary
+  attr_accessor :gif
 
   def initialize(data)
     @date = Time.at(data[:dt]).strftime('%A, %m/%d')
@@ -7,6 +8,7 @@ class Weather
     @high_temp = kelvin_temp(data[:main][:temp_max])
     @low_temp = kelvin_temp(data[:main][:temp_min])
     @summary = data[:weather][0][:description]
+    @gif = nil
   end
 
   def kelvin_temp(data)
