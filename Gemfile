@@ -36,6 +36,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'faraday'
 gem 'figaro'
+gem 'fast_jsonapi'
 
 
 group :development, :test do
